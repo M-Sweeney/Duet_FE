@@ -41,11 +41,9 @@ This site will be built using Sequelize/Express on the backend and React, Javasc
 - Artist.jsx
 - Conversations.jsx
 
+### Figma
+
 Link - https://www.figma.com/file/pV7v0Sbe5ibVfb72oooNIe/Duet?node-id=0%3A1&t=OaJc8CA1KkipOUtV-0
-
-### Pitch Deck
-
-Link - https://docs.google.com/presentation/d/17Pw1Po5peGgnLI-vCtbcH1cK11HNDjO8E75zt2vvpiE/
 
 ### Trello Board
 
@@ -56,9 +54,14 @@ Link - https://trello.com/b/Rk0BPwP2/duet
 - Add replies to comments (converstations)
 - Add the ability to connect and show your connections
 - Add the ability to like comments (conversations)
+- Create mobile optimized version
 
 ## Sources
 
 - Last.FM
 - Twitter
-- Other
+- Tinder/Dating Sites
+
+### Pitch Deck
+
+Link - https://docs.google.com/presentation/d/17Pw1Po5peGgnLI-vCtbcH1cK11HNDjO8E75zt2vvpiE/
