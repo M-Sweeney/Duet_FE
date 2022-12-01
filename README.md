@@ -30,18 +30,22 @@ This site will be built using Sequelize/Express on the backend and React, Javasc
 - User
 - Genre
 - Artist
-- Conversations/Feed
+- Conversations
 
 ## Components
 
 - App.js
 - Header.jsx
 - Main.jsx
-- Genres/Artists.jsx
+- Genre.jsx
+- Artist.jsx
+- Conversations.jsx
 
 Link - https://www.figma.com/file/pV7v0Sbe5ibVfb72oooNIe/Duet?node-id=0%3A1&t=OaJc8CA1KkipOUtV-0
 
-[Pitch Deck](https://docs.google.com/presentation/d/17Pw1Po5peGgnLI-vCtbcH1cK11HNDjO8E75zt2vvpiE/edit#slide=id.ge9090756a_1_300)
+### Pitch Deck
+
+Link - https://docs.google.com/presentation/d/17Pw1Po5peGgnLI-vCtbcH1cK11HNDjO8E75zt2vvpiE/
 
 ### Trello Board
 
@@ -49,8 +53,9 @@ Link - https://trello.com/b/Rk0BPwP2/duet
 
 ## Post-MVP Ideas
 
-- Add auth
-- Add the ability to connect
+- Add replies to comments (converstations)
+- Add the ability to connect and show your connections
+- Add the ability to like comments (conversations)
 
 ## Sources
 
