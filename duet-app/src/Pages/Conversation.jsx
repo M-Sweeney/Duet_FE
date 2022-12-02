@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom"
+import { useNavigate } from 'react-router-dom'
 import Header from "./Header"
 
-export default function Conversation () {
+export default function Conversation ({ user, authenticated }) {
+
+    let navigate = useNavigate()
 
     if (!Conversation) {
         return <h2 className="loading">LOADING</h2>
     } else {
-        return (
+        return (user && authenticated) ? (
             <div className="con-nav">
 
                 <Header />
@@ -28,6 +31,11 @@ export default function Conversation () {
                     <button>K-POP</button>
                 </Link>
                 </div>
+            </div>
+        ) : ( 
+            <div className='protected'>
+            <h3>Oops! You must be signed in to do that!</h3>
+            <button onClick={()=> navigate('/signin')}>Sign in</button>
             </div>
         )
     }

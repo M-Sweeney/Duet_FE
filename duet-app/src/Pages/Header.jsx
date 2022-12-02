@@ -1,6 +1,26 @@
 import { Link } from "react-router-dom";
 
-export default function Header () {
+export default function Header ({ authenticated, user, handleLogOut }) {
+    let authenticatedOptions
+    if (user) {
+    authenticatedOptions = (
+        <nav>
+        <h3>Welcome {user.email}!</h3>
+        <Link to="/feed">Feed</Link>
+        <Link onClick={handleLogOut} to="/">
+        Sign Out
+        </Link>
+        </nav>
+    )
+    }
+
+    const publicOptions = (
+    <nav>
+        <Link to="/">Home</Link>
+        <Link to="/register">Register</Link>
+        <Link to="/signin">Sign In</Link>
+    </nav>
+    )
 
     return (
     <div>
@@ -13,6 +33,7 @@ export default function Header () {
             <Link to="/genres">GENRES</Link>
             <Link to="/artists">ARTISTS</Link>
             <Link to="/">LOG OUT</Link>
+            {authenticated && user ? authenticatedOptions : publicOptions}
         </div>
     </div>
     )
