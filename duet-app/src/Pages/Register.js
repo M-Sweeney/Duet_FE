@@ -8,7 +8,7 @@ const Register = () => {
 
   const [formValues, setFormValues] = useState({
     name: '',
-    userName: '',
+    email: '',
     password: '',
     confirmPassword: ''
   })
@@ -22,13 +22,13 @@ const Register = () => {
 
     await RegisterUser({
       name: formValues.name,
-      userName: formValues.userName,
+      userName: formValues.email,
       password: formValues.password
     })
 
     setFormValues({
       name: '',
-      userName: '',
+      email: '',
       password: '',
       confirmPassword: ''
     })
