@@ -18,7 +18,7 @@ import Genre from "./Pages/Genre"
 import Artist from "./Pages/Artist"
 import Register from "./Pages/Register"
 import SignIn from "./Pages/SignIn"
-import CreateComment from "./components/CreateComment"
+// import CreateComment from "./components/CreateComment"
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
