@@ -44,6 +44,10 @@ export default function Pop () {
                     <h1 className=' absolute top-24 left-8 text-6xl font-semibold text-pink-500 md:text-7xl md:left-44'>NOW</h1>
                     <img src={Billie} alt='' className=' absolute right-8 bottom-0 max-h-60 md:right-36'/>
                 </div>
+                
+                <div className=' creat-comment-button-div'>
+                    <button className=' ml-0 mr-0 font-semibold text-base w-52 md:text-xl md:w-64 create-comment-button'>START A CONVO</button>
+                </div>
 
                 <div className=' my-7 mx-auto w-10/12 h-24 post-comment'>
 
