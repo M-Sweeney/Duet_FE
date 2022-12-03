@@ -14,7 +14,7 @@ export default function Conversation ({ user, authenticated }) {
 
                 <Header />
 
-                <div className=" flex justify-evenly relative  text-sm font-semibold my-8 md:text-lg">
+                <div className=" flex justify-evenly relative  text-sm font-semibold mt-8 mb-14 md:text-lg">
                 <Link className=" text-sm w-16 md:text-lg md:w-24  pop-button" to="/conversations/pop">
                     <button>POP</button>
                 </Link>
