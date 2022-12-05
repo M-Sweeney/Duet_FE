@@ -1,7 +1,7 @@
 import "./App.css"
 import { Route, Routes } from "react-router-dom"
-import { useState, useEffect } from "react"
-import { CheckSession } from "./Services/Auth"
+import { useState } from "react"
+// import { CheckSession } from "./Services/Auth"
 import GenreSelect from "./Pages/GenreSelect"
 import ArtistSelect from "./Pages/ArtistSelect"
 import Home from "./Pages/Home"
@@ -24,25 +24,25 @@ function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
 
-  const handleLogOut = () => {
-    //Reset all auth related state and clear localStorage
-    setUser(null)
-    toggleAuthenticated(false)
-    localStorage.clear()
-  }
+  // const handleLogOut = () => {
+  //   //Reset all auth related state and clear localStorage
+  //   setUser(null)
+  //   toggleAuthenticated(false)
+  //   localStorage.clear()
+  // }
 
-  useEffect(() => {
-    const token = localStorage.getItem("token")
-    if (token) {
-      checkToken()
-    }
-  }, [])
+  // useEffect(() => {
+  //   const token = localStorage.getItem("token")
+  //   if (token) {
+  //     checkToken()
+  //   }
+  // }, [])
 
-  const checkToken = async () => {
-    const user = await CheckSession()
-    setUser(user)
-    toggleAuthenticated(true)
-  }
+  // const checkToken = async () => {
+  //   const user = await CheckSession()
+  //   setUser(user)
+  //   toggleAuthenticated(true)
+  // }
 
   return (
     <div className="App">

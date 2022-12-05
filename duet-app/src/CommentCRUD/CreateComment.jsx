@@ -1,39 +1,39 @@
 import React from "react"
 import axios from "axios"
+import { useState } from 'react'
 
-export default class CreateComment extends React.Component {
+export default function CreateComment () {
  
-  state = {
-    "content": ''
+  const [content, setContent ] = useState('')
+  const [comment, setComment ]= useState('hello world')
+  
+
+  const handleChange = (e) => {
+    setContent({ ...content, [e.target.id]: e.target.value })
   }
 
-  handleChange = event => {
-    this.setState({ content: event.target.value })
-  }
-
-  handleSubmit = event => {
+  const handleSubmit = async (event, content) => {
     event.preventDefault()
+    console.log(content)
+    setComment(content)
+    console.log(comment)
+    
 
-    const comment = {
-      content: this.state.content
-    }
 
-    axios.post(`http://localhost:3001/comments/3`, { comment }).then((res) => {
+     await axios.post(`http://localhost:3001/comments`, { comment }).then((res) => {
       console.log(res)
       console.log(res.data)
     })
   }
 
-  render() {
+  
     return (
       <div className=" relative create-comment-div">
-        <form className=" " onSubmit={this.handleSubmit}>
-          <label>
-            <input className=" w-10/12 h-24 create-comment-input" placeholder="WHAT'S ON YOUR MIND?" type="text" content="content" onChange={this.handleChange} />
-          </label>
+        <form onSubmit={handleSubmit}>
+          <input className=" w-10/12 h-24 create-comment-input" type="text" placeholder="WHAT'S ON YOUR MIND" onChange={handleChange} value={content} /> 
           <button className=" absolute bottom-0 right-36 font-semibold" type="submit">POST</button>
         </form>
       </div>
     )
   }
-}
+
