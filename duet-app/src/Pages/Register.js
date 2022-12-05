@@ -22,7 +22,7 @@ const Register = () => {
 
     await RegisterUser({
       name: formValues.name,
-      email: formValues.email,
+      userName: formValues.email,
       password: formValues.password
     })
 
@@ -53,13 +53,13 @@ const Register = () => {
             />
           </div>
           <div className="input-wrapper">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="userName">Email</label>
             <input
               onChange={handleChange}
-              name="email"
-              type="email"
+              name="userName"
+              type="userName"
               placeholder="example@example.com"
-              value={formValues.email}
+              value={formValues.userName}
               required
             />
           </div>
@@ -86,7 +86,7 @@ const Register = () => {
           </div>
           <button
             disabled={
-              !formValues.email ||
+              !formValues.userName ||
               (!formValues.password &&
                 formValues.confirmPassword === formValues.password)
             }

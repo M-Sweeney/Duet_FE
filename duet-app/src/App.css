@@ -1,6 +1,6 @@
 .App {
     font-family: 'Poppins', sans-serif;
-    color: white;
+    color: black;
 }
 
 .pop-button {
@@ -94,6 +94,7 @@
     backdrop-filter: blur(20px);
     border-radius: 40px;
 }
+
 
 .pop-card {
     background: linear-gradient(302.84deg, #FF4F81 31.56%, #FF9257 85.25%);
