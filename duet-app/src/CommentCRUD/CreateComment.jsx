@@ -14,6 +14,7 @@ export default function CreateComment () {
 
   const handleSubmit = async (event, content) => {
     event.preventDefault()
+    
     console.log(content)
     setComment(content)
     console.log(comment)
@@ -24,6 +25,7 @@ export default function CreateComment () {
       console.log(res)
       console.log(res.data)
     })
+    // window.location.reload();
   }
 
   

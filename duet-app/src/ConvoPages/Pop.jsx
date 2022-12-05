@@ -51,7 +51,7 @@ export default function Pop () {
                     {isToggled && <CreateComment />}
                 </div>
 
-                {pop.map((pops) => (
+                {pop.slice(0).reverse().map((pops) => (
                 
                 <div className=' my-7 mx-auto w-10/12 h-24 post-comment' key={pops.id}>
                 
@@ -74,7 +74,7 @@ export default function Pop () {
 
                     <div className=' post-likes'>
                         <img src={heart} alt='' className=' absolute right-12 bottom-2 h-5 md:right-20 md:bottom-2 md:h-7 '/>
-                        <h4 className=' absolute right-8 bottom-1 md:right-16 md:bottom-3 '>{pops.liked}</h4>
+                        <h4 className=' absolute right-8 bottom-1 md:right-16 md:bottom-3 '>{pops.likes}</h4>
                     </div>
                 
                 </div>
