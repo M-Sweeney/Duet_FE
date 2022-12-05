@@ -11,10 +11,8 @@ export default function Header ({ authenticated, user, handleLogOut }) {
         <Link to="/connections"> CONNECTIONS </Link>
         <Link to="/genres"> GENRES </Link>
         <Link to="/artists"> ARTISTS </Link>
-        <Link to="/"> LOG OUT </Link>
-        <Link onClick={handleLogOut} to="/">
-        Sign Out
-        </Link>
+        <Link onClick={handleLogOut}  to="/"> LOG OUT </Link>
+        
         </nav>
     )
     }
