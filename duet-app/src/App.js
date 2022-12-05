@@ -42,6 +42,7 @@ function App() {
     const user = await CheckSession()
     setUser(user)
     toggleAuthenticated(true)
+    console.log('working', user, authenticated)
   }
 
   return (
