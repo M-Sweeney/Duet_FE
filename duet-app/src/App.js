@@ -18,7 +18,7 @@ import Genre from "./Pages/Genre"
 import Artist from "./Pages/Artist"
 import Register from "./Pages/Register"
 import SignIn from "./Pages/SignIn"
-// import CreateComment from "./components/CreateComment"
+import Header from "./Pages/Header"
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -42,14 +42,30 @@ function App() {
     const user = await CheckSession()
     setUser(user)
     toggleAuthenticated(true)
-    console.log('working', user, authenticated)
+    console.log("working", user, authenticated)
   }
 
   return (
     <div className="App">
+      <div className="header">
+        <Header
+          authenticated={authenticated}
+          user={user}
+          handleLogOut={handleLogOut}
+        />
+      </div>
       <div>
         <Routes>
-          <Route path="/" element={<Home  authenticated={authenticated} user={user} handleLogOut={handleLogOut}/>} />
+          <Route
+            path="/"
+            element={
+              <Home
+                authenticated={authenticated}
+                user={user}
+                handleLogOut={handleLogOut}
+              />
+            }
+          />
           <Route
             path="/signin"
             element={
@@ -60,20 +76,47 @@ function App() {
             }
           />
           <Route path="/register" element={<Register />} />
-          <Route path="/genreselect" element={<GenreSelect  user={user} authenticated={authenticated} />} />
-          <Route path="/artistselect" element={<ArtistSelect  user={user} authenticated={authenticated} />} />
+          <Route
+            path="/genreselect"
+            element={<GenreSelect user={user} authenticated={authenticated} />}
+          />
+          <Route
+            path="/artistselect"
+            element={<ArtistSelect user={user} authenticated={authenticated} />}
+          />
           <Route
             path="/conversations"
             element={<Conversation user={user} authenticated={authenticated} />}
           />
-          <Route path="/conversations/pop" element={<Pop  user={user} authenticated={authenticated} />} />
-          <Route path="/conversations/rnb" element={<RNB  user={user} authenticated={authenticated} />} />
-          <Route path="/conversations/rock" element={<Rock  user={user} authenticated={authenticated} />} />
-          <Route path="/conversations/rap" element={<Rap  user={user} authenticated={authenticated} />} />
-          <Route path="/conversations/kpop" element={<KPop  user={user} authenticated={authenticated} />} />
+          <Route
+            path="/conversations/pop"
+            element={<Pop user={user} authenticated={authenticated} />}
+          />
+          <Route
+            path="/conversations/rnb"
+            element={<RNB user={user} authenticated={authenticated} />}
+          />
+          <Route
+            path="/conversations/rock"
+            element={<Rock user={user} authenticated={authenticated} />}
+          />
+          <Route
+            path="/conversations/rap"
+            element={<Rap user={user} authenticated={authenticated} />}
+          />
+          <Route
+            path="/conversations/kpop"
+            element={<KPop user={user} authenticated={authenticated} />}
+          />
           <Route path="/connections" element={<Connection />} />
-          <Route path="/connections/likedprofiles" element={<LikedProfile  user={user} authenticated={authenticated} />} />
-          <Route path="/connections/boi" element={<BOI  user={user} authenticated={authenticated} />} />
+          <Route
+            path="/connections/likedprofiles"
+            element={<LikedProfile user={user} authenticated={authenticated} />}
+          />
+          <Route
+            path="/connections/boi"
+            element={<BOI user={user} authenticated={authenticated} />}
+          />
           <Route path="/genres" element={<Genre />} />
           <Route path="/artists" element={<Artist />} />
         </Routes>
