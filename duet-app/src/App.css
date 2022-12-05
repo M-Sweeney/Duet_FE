@@ -48,6 +48,35 @@
     border-radius: 40px;
 }
 
+.create-comment-button {
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    padding: .2rem;
+    text-align: center;
+    background: linear-gradient(122.21deg, rgba(21, 42, 233, 0.15) 55.56%, rgba(118, 116, 116, 0) 100.67%);
+    border: 0.5px solid #FFFFFF;
+    box-shadow: 7px 8px 19px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+    background: linear-gradient(90deg, #FFFFFF -6.26%, #C03AF7 95.26%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.create-comment-input {
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    padding: .2rem;
+    background: linear-gradient(122.21deg, rgba(21, 42, 233, 0.15) 55.56%, rgba(118, 116, 116, 0) 100.67%);
+    border: 0.5px solid #FFFFFF;
+    box-shadow: 7px 8px 19px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+}
+
 .liked-profiles-button {
     text-align: center;
     background: linear-gradient(122.21deg, rgba(21, 42, 233, 0.15) 55.56%, rgba(118, 116, 116, 0) 100.67%);
@@ -66,3 +95,19 @@
     border-radius: 40px;
 }
 
+
+.pop-card {
+    background: linear-gradient(302.84deg, #FF4F81 31.56%, #FF9257 85.25%);
+    border: 0.5px solid #FFFFFF;
+    box-shadow: 7px 8px 19px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+}
+
+.post-comment {
+    background: linear-gradient(120.38deg, rgba(255, 255, 255, 0.15) 44.03%, rgba(118, 116, 116, 0) 100.52%);
+    border: 0.5px solid #FFFFFF;
+    box-shadow: 7px 8px 19px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+}
