@@ -63,7 +63,18 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    
+}
+
+.create-comment-input {
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    padding: .2rem;
+    background: linear-gradient(122.21deg, rgba(21, 42, 233, 0.15) 55.56%, rgba(118, 116, 116, 0) 100.67%);
+    border: 0.5px solid #FFFFFF;
+    box-shadow: 7px 8px 19px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
 }
 
 .liked-profiles-button {
