@@ -19,14 +19,13 @@ export default function Pop () {
             const response = await axios.get(`http://localhost:3001/comments/view`)
             // console.log(response.data[0].name)
             setPop(response.data)
-            
         }
         getPop()
     }, [])
 
 
 
-    if (!Pop) {
+    if (!pop) {
         return <h2 className="loading">LOADING</h2>
     } else {
         return !pop ? (
@@ -53,16 +52,16 @@ export default function Pop () {
                 </div>
 
                 {pop.map((pops) => (
-
-                <div className=' my-7 mx-auto w-10/12 h-24 post-comment'>
+                
+                <div className=' my-7 mx-auto w-10/12 h-24 post-comment' key={pops.id}>
                 
                     <div className=' profile-name'>
                         <h2 className=' absolute text-xs top-1 left-7 font-semibold md:text-base md:top-0 md:left-10'>{pops.name}</h2>
                         <img src={pops.photo} alt='' className=' absolute rounded-full h-11 top-6 left-5 md:h-14 md:top-5 md:left-7'/>
                     </div>
                 
-                    <div className=' absolute top-6 left-28 text-xs w-44 md:text-base md:top-6 md:left-40 md:w-96 post-content'>
-                        <h1 className=' font-semibold'>{pops.content}</h1>
+                    <div className=' absolute top-6 left-28 text-xs w-1/2 md:text-base md:top-6 md:left-40 md:w-2/4 post-content'>
+                        <h1 className=' font-medium'>{pops.content}</h1>
                     </div>
 
                     <div>
