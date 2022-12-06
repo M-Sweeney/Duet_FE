@@ -3,7 +3,11 @@ import axios from "axios"
 import { useState } from "react"
 
 export default function CreateComment({ user }) {
-  const [content, setContent] = useState("")
+  const [content, setContent] = useState({
+    name: user.name,
+    photo: user.photo,
+    content: "",
+  })
 
   const handleChange = (e) => {
     setContent({ ...content, [e.target.id]: e.target.value })
@@ -17,10 +21,9 @@ export default function CreateComment({ user }) {
 
     await axios
       .post(`http://localhost:3001/comments/${user.id}`, content)
-      .then((res) => {
-        console.log(res)
-        console.log(res.data)
-      })
+      // console.log(res.data.id)
+
+      .then((res) => {})
     window.location.reload()
   }
 
@@ -31,7 +34,8 @@ export default function CreateComment({ user }) {
           className=" w-10/12 h-24 create-comment-input"
           id="content"
           type="text"
-          placeholder="WHAT'S ON YOUR MIND"
+          placeholder="WHAT'S ON YOUR MIND?"
+          autoComplete="off"
           onChange={handleChange}
           value={content[""]}
         />

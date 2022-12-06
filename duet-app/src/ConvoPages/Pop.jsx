@@ -5,10 +5,10 @@ import Billie from "../Assets/billie.png"
 // import jh from '../Assets/jh.jpeg'
 import heart from "../Assets/heart.png"
 import CreateComment from "../CommentCRUD/CreateComment"
+import DeleteComment from "../CommentCRUD/DeleteComment"
 
 export default function Pop({ user, authenticated }) {
   const [pop, setPop] = useState(null)
-
   const [isToggled, setIsToggled] = useState(false)
 
   useEffect(() => {
@@ -18,7 +18,7 @@ export default function Pop({ user, authenticated }) {
       setPop(response.data)
     }
     getPop()
-  }, [])
+  })
 
   if (!pop) {
     return <h2 className="loading">LOADING</h2>
@@ -85,9 +85,10 @@ export default function Pop({ user, authenticated }) {
               </div>
 
               <div>
-                <button className=" absolute right-20 bottom-2 md:right-32 md:bottom-3 bg-transparent font-semibold text-xs text-red-500">
+                {/* <button className=" absolute right-20 bottom-2 md:right-32 md:bottom-3 bg-transparent font-semibold text-xs text-red-500">
                   DELETE
-                </button>
+                </button> */}
+                <DeleteComment user={user} />
               </div>
 
               <div className=" post-likes">

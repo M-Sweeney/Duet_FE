@@ -1,50 +1,34 @@
 import React from "react"
 import axios from "axios"
 import { useState } from "react"
+// import { useParams } from "react-router-dom"
 
-export default function DeleteComment({ user }) {
+export default function DeleteComment({ commentId }) {
   const [content, setContent] = useState("")
+  // let { id } = useParams()
 
-  const handleChange = (e) => {
-    setContent({ ...content, [e.target.id]: e.target.value })
-    console.log(user)
-  }
+  // const handleChange = (e) => {
+  //   setContent({ ...content, [e.target.id]: e.target.value })
+  //   console.log(user)
+  // }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
+    console.log(commentId)
 
-    console.log(content)
-
+    //NEED TO FIGURE out how to called the COMMENT ID
     await axios
-      .delete(`http://localhost:3001/comments/${user.id}`, content)
+      .delete(`http://localhost:3001/comments/${commentId}`)
       .then((res) => {
-        console.log(res)
-        console.log(res.data)
+        // console.log(res)
+        // console.log(res.data)
       })
     window.location.reload()
-  }
-
-  const deleteComment = async (req, res) => {
-    try {
-      let commentId = parseInt(req.params.comment_id)
-      await Comment.destroy({ where: { id: commentId } })
-      res.send({ message: `Deleted comment with an id of ${commentId}` })
-    } catch (error) {
-      throw error
-    }
   }
 
   return (
     <div className=" relative create-comment-div">
       <form onSubmit={handleSubmit}>
-        <input
-          className=" w-10/12 h-24 create-comment-input"
-          id="content"
-          type="text"
-          placeholder="WHAT'S ON YOUR MIND"
-          onChange={handleChange}
-          value={content[""]}
-        />
         <button
           className=" absolute bottom-0 right-36 font-semibold"
           type="submit"
@@ -55,5 +39,3 @@ export default function DeleteComment({ user }) {
     </div>
   )
 }
-
-//////
