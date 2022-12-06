@@ -21,7 +21,9 @@ export default function CreateComment({ user }) {
         console.log(res)
         console.log(res.data)
       })
-    window.location.reload()
+
+    window.location.reload();
+
   }
 
   return (
@@ -31,12 +33,13 @@ export default function CreateComment({ user }) {
           className=" w-10/12 h-24 create-comment-input"
           id="content"
           type="text"
-          placeholder="WHAT'S ON YOUR MIND"
+          placeholder="WHAT'S ON YOUR MIND?"
+          autoComplete="off"
           onChange={handleChange}
           value={content[""]}
         />
         <button
-          className=" absolute bottom-0 right-36 font-semibold"
+          className=" absolute bottom-1 right-24 text-sm md:right-60 md:text-base font-semibold"
           type="submit"
         >
           POST

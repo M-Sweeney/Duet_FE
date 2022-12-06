@@ -5,7 +5,7 @@ export default function Header({ authenticated, user, handleLogOut }) {
   let authenticatedOptions
   if (user) {
     authenticatedOptions = (
-      <div className=" flex justify-evenly relative  text-sm font-semibold my-5 md:text-lg">
+      <div className=" flex justify-evenly relative  text-sm font-semibold md:my-5 md:text-lg">
         <div className="">
           <Link className=" text-left text-xl font-bold md:text-3xl" to="/">
             DUET
