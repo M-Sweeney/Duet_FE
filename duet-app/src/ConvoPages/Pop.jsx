@@ -88,7 +88,7 @@ export default function Pop({ user, authenticated }) {
                 {/* <button className=" absolute right-20 bottom-2 md:right-32 md:bottom-3 bg-transparent font-semibold text-xs text-red-500">
                   DELETE
                 </button> */}
-                <DeleteComment user={user} />
+                <DeleteComment user={user} comment={pops.id}/>
               </div>
 
               <div className=" post-likes">
