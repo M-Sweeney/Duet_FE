@@ -30,7 +30,7 @@ export default function DeleteComment({ commentId }) {
     <div className=" relative create-comment-div">
       <form onSubmit={handleSubmit}>
         <button
-          className=" absolute bottom-0 right-36 font-semibold"
+          className=" absolute text-red-400 text-xs -bottom-24 right-20 md:-bottom-20 md:right-32 font-semibold"
           type="submit"
         >
           DELETE
