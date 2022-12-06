@@ -7,12 +7,12 @@ export default function Header({ authenticated, user, handleLogOut }) {
     authenticatedOptions = (
       <div className=" flex justify-evenly relative  text-sm font-semibold md:my-5 md:text-lg">
         <div className="">
-          <Link className=" text-left text-xl font-bold md:text-3xl" to="/conversations">
+          <Link className=" text-left text-xl font-bold md:text-3xl" to="/conversations/pop">
             DUET
           </Link>
         </div>
 
-        <Link to="/conversations">CONVERSATIONS</Link>
+        <Link to="/conversations/pop">CONVERSATIONS</Link>
         <Link to="/connections">CONNECTIONS</Link>
         <Link to="/genres">GENRES</Link>
         <Link to="/artists">ARTISTS</Link>
