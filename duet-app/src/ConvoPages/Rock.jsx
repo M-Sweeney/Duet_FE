@@ -1,4 +1,4 @@
-import Conversation from "../Pages/Conversation"
+
 
 export default function Rock ({user, authenticated}) {
 
@@ -8,8 +8,7 @@ export default function Rock ({user, authenticated}) {
         return (
             <div className="rock-page">
 
-                <Conversation  user={user} authenticated={authenticated} />
-
+               
             </div>
         )
     }
