@@ -1,6 +1,6 @@
 import Conversation from "../Pages/Conversation"
 
-export default function Rap () {
+export default function Rap ({user, authenticated}) {
 
     if (!Rap) {
         return <h2 className="loading">LOADING</h2>
@@ -8,7 +8,7 @@ export default function Rap () {
         return (
             <div className="rap-page">
 
-                <Conversation />
+                <Conversation  user={user} authenticated={authenticated} />
 
             </div>
         )

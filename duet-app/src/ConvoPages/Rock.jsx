@@ -1,6 +1,6 @@
 import Conversation from "../Pages/Conversation"
 
-export default function Rock () {
+export default function Rock ({user, authenticated}) {
 
     if (!Rock) {
         return <h2 className="loading">LOADING</h2>
@@ -8,7 +8,7 @@ export default function Rock () {
         return (
             <div className="rock-page">
 
-                <Conversation />
+                <Conversation  user={user} authenticated={authenticated} />
 
             </div>
         )

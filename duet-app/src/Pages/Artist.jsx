@@ -1,4 +1,4 @@
-import Header from "./Header"
+
 
 export default function Artist() {
   if (!Artist) {
