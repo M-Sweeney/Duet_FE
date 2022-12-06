@@ -10,7 +10,6 @@ const Register = () => {
     email: "",
     password: "",
     confirmPassword: "",
-    photo: "",
   })
 
   const handleChange = (e) => {
@@ -24,7 +23,6 @@ const Register = () => {
       name: formValues.name,
       email: formValues.email,
       password: formValues.password,
-      photo: formValues.photo,
     })
 
     setFormValues({
@@ -32,7 +30,6 @@ const Register = () => {
       email: "",
       password: "",
       confirmPassword: "",
-      photo: "",
     })
 
     navigate("/signin")
@@ -85,17 +82,6 @@ const Register = () => {
               required
             />
           </div>
-          <label for="photo">Choose a profile picture:</label>
-
-          <input
-            onChange={handleChange}
-            type="file"
-            id="photo"
-            name="photo"
-            accept="image/png, image/jpeg"
-            value={formValues.photo}
-            required
-          />
           <button
             disabled={
               !formValues.email ||

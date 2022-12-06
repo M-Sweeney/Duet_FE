@@ -5,7 +5,7 @@ import { useState } from "react"
 export default function CreateComment({ user }) {
   const [content, setContent] = useState({
     name: user.name,
-    photo: user.photo,
+    photo: "https://imgur.com/LsLS8Gv.jpg",
     content: "",
   })
 
