@@ -6,10 +6,12 @@ import Billie from "../Assets/billie.png"
 import heart from "../Assets/heart.png"
 import CreateComment from "../CommentCRUD/CreateComment"
 import DeleteComment from "../CommentCRUD/DeleteComment"
+import UpdateComment from "../CommentCRUD/UpdateComment"
 
 export default function Pop({ user, authenticated }) {
   const [pop, setPop] = useState(null)
   const [isToggled, setIsToggled] = useState(false)
+  const [isToggledEdit, setIsToggledEdit] = useState(false)
 
   useEffect(() => {
     const getPop = async () => {
@@ -78,17 +80,23 @@ export default function Pop({ user, authenticated }) {
                 <h1 className=" font-medium">{pops.content}</h1>
               </div>
 
+              {(user.id === pops.user_id) ? 
               <div>
-                <button className=" absolute right-32 bottom-2 md:right-44 md:bottom-3 bg-transparent font-semibold text-xs text-green-400">
-                  EDIT
-                </button>
-              </div>
+
+                <button
+            onClick={() => setIsToggledEdit(!isToggledEdit)}
+          >
+            EDIT
+          </button>
+          {isToggledEdit && <UpdateComment user={user} pops={pops}/>}
+              </div> : null}
 
               <div>
-                {/* <button className=" absolute right-20 bottom-2 md:right-32 md:bottom-3 bg-transparent font-semibold text-xs text-red-500">
-                  DELETE
-                </button> */}
-                <DeleteComment user={user} comment={pops.id}/>
+
+
+                {(user.id === pops.user_id) ? <DeleteComment user={user} comment={pops.id}/> : null}
+
+
               </div>
 
               <div className=" post-likes">
