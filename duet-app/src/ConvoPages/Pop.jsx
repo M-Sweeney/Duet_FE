@@ -8,11 +8,12 @@ import CreateComment from '../CommentCRUD/CreateComment'
 
 
 
-export default function Pop () {
+export default function Pop ({user, authenticated}) {
 
     const [pop, setPop] = useState(null)
 
     const [isToggled, setIsToggled] = useState(false)
+
 
     useEffect(() => {
         const getPop = async () => {
@@ -38,7 +39,7 @@ export default function Pop () {
         ): 
             <div className=" relative pop-page">
 
-                <Conversation />
+                <Conversation   user={user} authenticated={authenticated} />
              
                 <div className=' mt-4 mx-auto w-10/12 h-52 pop-card'>
                     <h1 className=' absolute top-10 left-8 text-6xl font-semibold text-pink-500 md:text-7xl md:left-20'>POP</h1>

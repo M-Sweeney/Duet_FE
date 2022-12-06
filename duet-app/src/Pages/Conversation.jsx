@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
-import Header from "./Header"
+
 
 export default function Conversation({ user, authenticated }) {
   console.log(user, authenticated)
@@ -38,6 +38,8 @@ export default function Conversation({ user, authenticated }) {
       >
         <button>K-POP</button>
       </Link>
+
+
     </div>
   )
 

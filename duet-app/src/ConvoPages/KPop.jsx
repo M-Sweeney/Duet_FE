@@ -1,6 +1,6 @@
 import Conversation from "../Pages/Conversation"
 
-export default function KPop () {
+export default function KPop ({user, authenticated}) {
 
     if (!KPop) {
         return <h2 className="loading">LOADING</h2>
@@ -8,7 +8,7 @@ export default function KPop () {
         return (
             <div className="kpop-page">
 
-                <Conversation />
+                <Conversation  user={user} authenticated={authenticated} />
 
             </div>
         )
