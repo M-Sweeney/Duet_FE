@@ -10,13 +10,13 @@ export default function CreateComment({ user }) {
     console.log(user)
   }
 
-  const handleSubmit = async (event, content) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
 
     console.log(content)
 
     await axios
-      .post(`http://localhost:3001/comments/${user.id}`, { content })
+      .post(`http://localhost:3001/comments/${user.id}`, content)
       .then((res) => {
         console.log(res)
         console.log(res.data)
