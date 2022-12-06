@@ -3,7 +3,7 @@ import axios from "axios"
 import { useState } from "react"
 // import { useParams } from "react-router-dom"
 
-export default function DeleteComment({ commentId }) {
+export default function DeleteComment({ comment }) {
   const [content, setContent] = useState("")
   // let { id } = useParams()
 
@@ -14,16 +14,16 @@ export default function DeleteComment({ commentId }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    console.log(commentId)
+    console.log(comment)
 
     //NEED TO FIGURE out how to called the COMMENT ID
     await axios
-      .delete(`http://localhost:3001/comments/${commentId}`)
+      .delete(`http://localhost:3001/comments/${comment}`)
       .then((res) => {
-        // console.log(res)
+        console.log(comment)
         // console.log(res.data)
       })
-    window.location.reload()
+    // window.location.reload()
   }
 
   return (
