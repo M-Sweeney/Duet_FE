@@ -21,17 +21,10 @@ export default function CreateComment({ user }) {
 
     await axios
       .post(`http://localhost:3001/comments/${user.id}`, content)
-
-    
-
       .then((res) => {
         console.log(res)
         console.log(res.data)
       })
-
-    window.location.reload();
-
-
   }
 
   return (

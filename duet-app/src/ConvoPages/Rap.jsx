@@ -1,4 +1,4 @@
-
+import Conversation from "../Pages/Conversation"
 
 export default function Rap ({user, authenticated}) {
 
@@ -8,7 +8,7 @@ export default function Rap ({user, authenticated}) {
         return (
             <div className="rap-page">
 
-                
+                <Conversation  user={user} authenticated={authenticated} />
 
             </div>
         )

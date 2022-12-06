@@ -28,7 +28,7 @@ export default function MobileHeader({ authenticated, user, handleLogOut }) {
         <Link to="/artists">
             <img className=" h-12" src={artists} alt=""/>
         </Link>
-        <Link onClick={handleLogOut} to="/">
+        <Link onClick={handleLogOut} to="/signin">
             <img className=" h-12" src={logout} alt=""/>
         </Link>
       </div>
