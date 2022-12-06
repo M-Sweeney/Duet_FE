@@ -26,10 +26,10 @@ export default function UpdateComment({ user, pops }) {
   }
 
   return (
-    <div className=" relative create-comment-div">
+    <div className=" relative edit-comment-div">
       <form onSubmit={handleSubmit}>
         <input
-          className=" w-10/12 h-24 create-comment-input"
+          className=" absolute right-0 -bottom-16  w-10/12 h-16  edit-comment-input"
           id="content"
           type="text"
           placeholder={pops.content}
@@ -38,7 +38,7 @@ export default function UpdateComment({ user, pops }) {
           value={content[""]}
         />
         <button
-          className=" absolute bottom-1 right-24 text-sm md:right-60 md:text-base font-semibold"
+          className=" absolute -bottom-16 right-10 text-base md:-bottom-16 md:right-10 md:text-base font-semibold"
           type="submit"
         >
           SUBMIT
