@@ -80,24 +80,19 @@ export default function Pop({ user, authenticated }) {
                 <h1 className=" font-medium">{pops.content}</h1>
               </div>
 
+              {(user.id === pops.user_id) ? 
               <div>
-                {/* <button className=" absolute right-32 bottom-2 md:right-44 md:bottom-3 bg-transparent font-semibold text-xs text-green-400">
-                  EDIT
-                </button> */}
-                {/* <UpdateComment user={user} pops={pops}/> */}
+
                 <button
             onClick={() => setIsToggledEdit(!isToggledEdit)}
           >
             EDIT
           </button>
           {isToggledEdit && <UpdateComment user={user} pops={pops}/>}
-          {/* {(user.id === pops.user_id) ? <UpdateComment user={user} comment={pops}/> : null} */}
-              </div>
+              </div> : null}
 
               <div>
-                {/* <button className=" absolute right-20 bottom-2 md:right-32 md:bottom-3 bg-transparent font-semibold text-xs text-red-500">
-                  DELETE
-                </button> */}
+
 
                 {(user.id === pops.user_id) ? <DeleteComment user={user} comment={pops.id}/> : null}
 

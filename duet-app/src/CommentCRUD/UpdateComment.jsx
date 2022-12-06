@@ -32,7 +32,7 @@ export default function UpdateComment({ user, pops }) {
           className=" w-10/12 h-24 create-comment-input"
           id="content"
           type="text"
-          placeholder="WHAT'S ON YOUR MIND?"
+          placeholder={pops.content}
           autoComplete="off"
           onChange={handleChange}
           value={content[""]}
@@ -41,7 +41,7 @@ export default function UpdateComment({ user, pops }) {
           className=" absolute bottom-1 right-24 text-sm md:right-60 md:text-base font-semibold"
           type="submit"
         >
-          EDIT
+          SUBMIT
         </button>
       </form>
     </div>
