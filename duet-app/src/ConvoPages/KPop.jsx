@@ -1,4 +1,4 @@
-
+import Conversation from "../Pages/Conversation"
 
 export default function KPop ({user, authenticated}) {
 
@@ -8,7 +8,7 @@ export default function KPop ({user, authenticated}) {
         return (
             <div className="kpop-page">
 
-                
+                <Conversation  user={user} authenticated={authenticated} />
 
             </div>
         )
