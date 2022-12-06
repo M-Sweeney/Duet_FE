@@ -3,6 +3,13 @@
     color: white;
 }
 
+.mobile-navbar-div {
+    background: #67058d;
+    border-right: 2rem;
+    position: fixed;
+    bottom: 0;
+}
+
 .pop-button {
     text-align: center;
     background: linear-gradient(122.21deg, rgba(21, 42, 233, 0.15) 55.56%, rgba(118, 116, 116, 0) 100.67%);

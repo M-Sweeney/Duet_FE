@@ -19,6 +19,7 @@ import Artist from "./Pages/Artist"
 import Register from "./Pages/Register"
 import SignIn from "./Pages/SignIn"
 import Header from "./Pages/Header"
+import MobileHeader from "./Pages/MobileHeader"
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -47,8 +48,9 @@ function App() {
 
   return (
     <div className="App">
-      <div className="header">
+      <div className=" invisible md:visible header">
         <Header
+          className=' invisible md:visible'
           authenticated={authenticated}
           user={user}
           handleLogOut={handleLogOut}
@@ -120,6 +122,14 @@ function App() {
           <Route path="/genres" element={<Genre />} />
           <Route path="/artists" element={<Artist />} />
         </Routes>
+      </div>
+      <div className=" visible md:invisible  mobile-header">
+        <MobileHeader
+          className=' visible md:invisible'
+          authenticated={authenticated}
+          user={user}
+          handleLogOut={handleLogOut}
+        />
       </div>
     </div>
   )

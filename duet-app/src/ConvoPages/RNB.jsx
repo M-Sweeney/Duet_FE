@@ -1,4 +1,4 @@
-import Conversation from "../Pages/Conversation"
+
 
 export default function RNB ({user, authenticated}) {
 
@@ -7,8 +7,6 @@ export default function RNB ({user, authenticated}) {
     } else {
         return (
             <div className="rnb-page">
-
-                <Conversation  user={user} authenticated={authenticated} />
 
             </div>
         )

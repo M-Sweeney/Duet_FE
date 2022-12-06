@@ -21,10 +21,17 @@ export default function CreateComment({ user }) {
 
     await axios
       .post(`http://localhost:3001/comments/${user.id}`, content)
-      // console.log(res.data.id)
 
-      .then((res) => {})
-    window.location.reload()
+    
+
+      .then((res) => {
+        console.log(res)
+        console.log(res.data)
+      })
+
+    window.location.reload();
+
+
   }
 
   return (
@@ -40,7 +47,7 @@ export default function CreateComment({ user }) {
           value={content[""]}
         />
         <button
-          className=" absolute bottom-0 right-36 font-semibold"
+          className=" absolute bottom-1 right-24 text-sm md:right-60 md:text-base font-semibold"
           type="submit"
         >
           POST

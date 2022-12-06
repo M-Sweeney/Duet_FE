@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 
-
 export default function Connection() {
   if (!Connection) {
     return <h2 className="loading">LOADING</h2>
