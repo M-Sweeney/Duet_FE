@@ -21,7 +21,7 @@ export default function CreateComment({ user }) {
         console.log(res)
         console.log(res.data)
       })
-    // window.location.reload();
+    window.location.reload()
   }
 
   return (
