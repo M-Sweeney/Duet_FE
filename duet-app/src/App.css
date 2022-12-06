@@ -72,6 +72,17 @@
     background-clip: text;
 }
 
+.edit-comment-input {
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    padding: .2rem;
+    background: linear-gradient(122.21deg, rgba(122, 24, 241, 0.7) 55.56%, rgba(255, 255, 255, 0.1) 100.67%);
+    box-shadow: 7px 8px 19px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+}
+
 .create-comment-input {
     display: block;
     margin: auto;

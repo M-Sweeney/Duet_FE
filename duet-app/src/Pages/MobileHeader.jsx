@@ -13,10 +13,10 @@ export default function MobileHeader({ authenticated, user, handleLogOut }) {
     authenticatedOptions = (
       <div className=" flex justify-evenly relative w-screen h-20 pt-4 mobile-navbar-div">
         
-        <Link to="/conversations">
+        <Link to="/conversations/pop">
             <img className=" h-12" src={home} alt=""/>
         </Link>
-        <Link to="/conversations">
+        <Link to="/conversations/pop">
             <img className=" h-12" src={convos} alt=""/>
         </Link>
         <Link to="/connections">

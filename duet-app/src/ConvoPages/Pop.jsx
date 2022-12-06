@@ -83,7 +83,7 @@ export default function Pop({ user, authenticated }) {
               {(user.id === pops.user_id) ? 
               <div>
 
-                <button
+                <button className=" absolute text-green-400 z-4 text-xs -bottom-0 right-32 md:-bottom-0 md:right-48 font-semibold"
             onClick={() => setIsToggledEdit(!isToggledEdit)}
           >
             EDIT
@@ -92,7 +92,6 @@ export default function Pop({ user, authenticated }) {
               </div> : null}
 
               <div>
-
 
                 {(user.id === pops.user_id) ? <DeleteComment user={user} comment={pops.id}/> : null}
 
