@@ -13,7 +13,6 @@ export default function Pop({ user, authenticated }) {
   const [isToggled, setIsToggled] = useState(false)
   const [isToggledEdit, setIsToggledEdit] = useState(false)
 
-
   useEffect(() => {
     const getPop = async () => {
       const response = await axios.get(`http://localhost:3001/comments/view`)
@@ -92,13 +91,17 @@ export default function Pop({ user, authenticated }) {
             EDIT
           </button>
           {isToggledEdit && <UpdateComment user={user} pops={pops}/>}
+          {/* {(user.id === pops.user_id) ? <UpdateComment user={user} comment={pops}/> : null} */}
               </div>
 
               <div>
                 {/* <button className=" absolute right-20 bottom-2 md:right-32 md:bottom-3 bg-transparent font-semibold text-xs text-red-500">
                   DELETE
                 </button> */}
-                <DeleteComment user={user} comment={pops.id}/>
+
+                {(user.id === pops.user_id) ? <DeleteComment user={user} comment={pops.id}/> : null}
+
+
               </div>
 
               <div className=" post-likes">
