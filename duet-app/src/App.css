@@ -123,7 +123,7 @@
 }
 
 .kpop-card {
-    background: linear-gradient(302.84deg, #FF4F81 31.56%, #FF9257 85.25%);
+    background: linear-gradient(302.84deg, #FF4F81 31.56%, #0d0703 85.25%);
     border: 0.5px solid #FFFFFF;
     box-shadow: 7px 8px 19px 1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(20px);
@@ -131,7 +131,7 @@
 }
 
 .rap-card {
-    background: linear-gradient(302.84deg, #FF4F81 31.56%, #FF9257 85.25%);
+    background: linear-gradient(302.84deg, #0a77fa 31.56%, #3c3c9d 85.25%);
     border: 0.5px solid #FFFFFF;
     box-shadow: 7px 8px 19px 1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(20px);
@@ -139,7 +139,7 @@
 }
 
 .rnb-card {
-    background: linear-gradient(302.84deg, #FF4F81 31.56%, #FF9257 85.25%);
+    background: linear-gradient(302.84deg, #ffc936 31.56%, #1d1d1d 85.25%);
     border: 0.5px solid #FFFFFF;
     box-shadow: 7px 8px 19px 1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(20px);
@@ -147,7 +147,7 @@
 }
 
 .rock-card {
-    background: linear-gradient(302.84deg, #FF4F81 31.56%, #FF9257 85.25%);
+    background: linear-gradient(302.84deg, #e3b69f 31.56%, #59260a 85.25%);
     border: 0.5px solid #FFFFFF;
     box-shadow: 7px 8px 19px 1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(20px);
