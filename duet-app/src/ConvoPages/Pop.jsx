@@ -16,7 +16,6 @@ export default function Pop({ user, authenticated }) {
   useEffect(() => {
     const getPop = async () => {
       const response = await axios.get(`http://localhost:3001/comments/view`)
-      // console.log(response.data[0].name)
       setPop(response.data)
     }
     getPop()
