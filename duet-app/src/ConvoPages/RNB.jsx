@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import Conversation from "../Pages/Conversation"
-import Billie from "../Assets/billie.png"
+import RNB from "../Assets/rnb.png"
 // import jh from '../Assets/jh.jpeg'
 import heart from "../Assets/heart.png"
 import CreateComment from "../CommentCRUD/CreateComment"
@@ -34,13 +34,13 @@ if (!rnb) {
 
         <div className=" mt-4 mx-auto w-10/12 h-52 rnb-card">
         <h1 className=" absolute top-10 left-8 text-6xl font-semibold text-pink-500 md:text-7xl md:left-20">
-            RNB
+            R&B
         </h1>
         <h1 className=" absolute top-24 left-8 text-6xl font-semibold text-pink-500 md:text-7xl md:left-44">
             NOW
         </h1>
         <img
-            src={Billie}
+            src={RNB}
             alt=""
             className=" absolute right-8 bottom-0 max-h-60 md:right-36"
         />

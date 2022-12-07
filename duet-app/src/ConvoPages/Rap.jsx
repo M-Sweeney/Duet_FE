@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import Conversation from "../Pages/Conversation"
-import Billie from "../Assets/billie.png"
+import Rap from "../Assets/rap.png"
 // import jh from '../Assets/jh.jpeg'
 import heart from "../Assets/heart.png"
 import CreateComment from "../CommentCRUD/CreateComment"
@@ -40,7 +40,7 @@ if (!rap) {
             NOW
         </h1>
         <img
-            src={Billie}
+            src={Rap}
             alt=""
             className=" absolute right-8 bottom-0 max-h-60 md:right-36"
         />
