@@ -2,7 +2,12 @@ import React from "react"
 import axios from "axios"
 import { useState } from "react"
 
-export default function UpdateComment({ user, pops }) {
+export default function UpdateComment({
+  user,
+  pops,
+  setIsToggledEdit,
+  isToggledEdit,
+}) {
   const [content, setContent] = useState({
     content: "",
   })
@@ -40,6 +45,7 @@ export default function UpdateComment({ user, pops }) {
         <button
           className=" absolute -bottom-16 right-10 text-base md:-bottom-16 md:right-10 md:text-base font-semibold"
           type="submit"
+          onClick={() => setIsToggledEdit(!isToggledEdit)}
         >
           SUBMIT
         </button>
