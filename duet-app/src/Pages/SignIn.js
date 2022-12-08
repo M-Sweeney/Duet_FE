@@ -55,7 +55,7 @@ const SignIn = (props) => {
             className="mt-5 text-2xl font-semibold signinButton"
             disabled={!formValues.email || !formValues.password}
           >
-            Sign In
+            SIGN IN
           </button>
         </form>
       </div>
