@@ -20,7 +20,7 @@ export default function Pop({ user, authenticated }) {
       setPop(response.data)
     }
     getPop()
-  })
+  }, [])
 
   if (!pop) {
     return <h2 className="loading">LOADING</h2>
@@ -83,7 +83,7 @@ export default function Pop({ user, authenticated }) {
               {(user.id === pops.user_id) ? 
               <div>
 
-                <button className=" absolute text-green-400 z-4 text-xs -bottom-0 right-32 md:-bottom-0 md:right-48 font-semibold"
+                <button className=" absolute text-green-400 text-xs -bottom-0 right-32 md:-bottom-0 md:right-48 font-semibold"
             onClick={() => setIsToggledEdit(!isToggledEdit)}
           >
             EDIT
