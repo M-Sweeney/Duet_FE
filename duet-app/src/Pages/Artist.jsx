@@ -28,6 +28,7 @@ export default function Artist(user, authenticated) {
                 <img
                   className=" rounded-full hover:border-2 hover:border-green-400 transition"
                   src={artists.photo}
+                  alt=""
                   width="200px"
                   height="200px"
                 />
