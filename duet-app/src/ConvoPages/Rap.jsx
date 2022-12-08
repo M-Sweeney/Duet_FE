@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 import Conversation from "../Pages/Conversation"
 import Rap from "../Assets/drake.png"
 // import jh from '../Assets/jh.jpeg'
@@ -13,6 +14,7 @@ const [rap, setRap] = useState(null)
 const [isToggled, setIsToggled] = useState(false)
 const [isToggledEdit, setIsToggledEdit] = useState(false)
 const [isCurrent, setCurrent] = useState(null)
+let navigate = useNavigate()
 
 useEffect(() => {
     const getRap = async () => {
@@ -25,11 +27,7 @@ useEffect(() => {
 if (!rap) {
     return <h2 className="loading">LOADING</h2>
 } else {
-    return !rap ? (
-    <div>
-        <h2 className="loading">Loading</h2>
-    </div>
-    ) : (
+    return (user && authenticated) ? (
     <div className=" relative rap-page">
         <Conversation user={user} authenticated={authenticated} />
 
@@ -121,6 +119,11 @@ if (!rap) {
             </div>
         ))}
     </div>
+    ) : ( 
+        <div className='protected'>
+        <h3>Oops! You must be signed in to do that!</h3>
+        <button onClick={()=> navigate('/signin')}>Sign in</button>
+        </div>
     )
 }
 }
