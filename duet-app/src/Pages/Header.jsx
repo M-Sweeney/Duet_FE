@@ -7,7 +7,10 @@ export default function Header({ authenticated, user, handleLogOut }) {
     authenticatedOptions = (
       <div className=" flex justify-evenly relative  text-sm font-semibold md:my-5 md:text-lg">
         <div className="">
-          <Link className=" text-left text-xl font-bold md:text-3xl" to="/conversations/pop">
+          <Link
+            className=" text-left text-xl font-bold md:text-3xl"
+            to="/conversations/pop"
+          >
             DUET
           </Link>
         </div>
@@ -25,9 +28,11 @@ export default function Header({ authenticated, user, handleLogOut }) {
   }
 
   const publicOptions = (
-    <nav>
+    <nav className="flex justify-end gap-5 mr-5 mt-5 publicOptions">
       <Link to="/">Home </Link>
+      <h1>|</h1>
       <Link to="/register"> Register </Link>
+      <h1>|</h1>
       <Link to="/signin"> Sign In</Link>
     </nav>
   )
