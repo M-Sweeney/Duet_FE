@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import Conversation from "../Pages/Conversation"
-import RNB from "../Assets/rnb.png"
+import RNB from "../Assets/theweeknd.png"
 // import jh from '../Assets/jh.jpeg'
 import heart from "../Assets/heart.png"
 import CreateComment from "../CommentCRUD/CreateComment"
@@ -20,7 +20,7 @@ useEffect(() => {
     setRnb(response.data)
     }
     getRnb()
-})
+}, [])
 
 if (!rnb) {
     return <h2 className="loading">LOADING</h2>
@@ -34,10 +34,10 @@ if (!rnb) {
         <Conversation user={user} authenticated={authenticated} />
 
         <div className=" mt-4 mx-auto w-10/12 h-52 rnb-card">
-        <h1 className=" absolute top-10 left-8 text-6xl font-semibold text-pink-500 md:text-7xl md:left-20">
+        <h1 className=" absolute top-10 left-8 text-6xl font-semibold text-yellow-400 md:text-7xl md:left-20">
             R&B
         </h1>
-        <h1 className=" absolute top-24 left-8 text-6xl font-semibold text-pink-500 md:text-7xl md:left-44">
+        <h1 className=" absolute top-24 left-8 text-6xl font-semibold text-yellow-400 md:text-7xl md:left-44">
             NOW
         </h1>
         <img

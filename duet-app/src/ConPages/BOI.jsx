@@ -1,6 +1,7 @@
 import Connection from "../Pages/Connection"
 import { useState, useEffect } from "react"
 import axios from "axios"
+import jh from "../Assets/jh.jpeg"
 
 export default function BOI ({ user, authenticated }) {
 
@@ -61,7 +62,7 @@ export default function BOI ({ user, authenticated }) {
 
                     <div className=" flex justify-evenly mt-24 mb-40 md:my-32">
                     <div>
-                        <img className=" rounded-full hover:scale-110 transition hover:border-green-300 hover:border-2 h-36 md:h-64" src={boi[0].photo} alt=""/>
+                        <img className=" rounded-full hover:scale-110 transition hover:border-green-300 hover:border-2 h-36 md:h-64" src={jh} alt=""/>
                         <h1 className=" mt-5 font-semibold text-base md:text-lg  text-center">{boi[0].name}</h1>
                         <h1 className=" text-blue-300 mt-10 font-semibold text-2xl md:text-4xl text-center">{boi[0].artistInterest}</h1>
                     </div>

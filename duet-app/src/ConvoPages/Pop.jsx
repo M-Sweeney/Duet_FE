@@ -78,9 +78,11 @@ if (!pop) {
 
             <div className=" absolute top-6 left-28 text-xs w-1/2 md:text-base md:top-6 md:left-40 md:w-2/4 post-content">
                 <h1 className=" font-medium">{pops.content}</h1>
+
             </div>
 
             {user.id === pops.user_id ? (
+
                 <div>
                 <button
                     className=" absolute text-green-400 z-4 text-xs -bottom-0 right-32 md:-bottom-0 md:right-48 font-semibold"
@@ -90,8 +92,10 @@ if (!pop) {
                     }}
                 >
                     EDIT
+
                 </button>
                 {isToggledEdit && isCurrent === pops.id ? (
+
                     <UpdateComment
                     user={user}
                     pops={pops}
@@ -122,5 +126,7 @@ if (!pop) {
         ))}
     </div>
     )
+
 }
+
 }
