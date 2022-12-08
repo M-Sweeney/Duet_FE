@@ -3,7 +3,6 @@ import axios from "axios"
 import { useState } from "react"
 
 export default function UpdateComment({
-  user,
   pops,
   setIsToggledEdit,
   isToggledEdit,
@@ -14,20 +13,14 @@ export default function UpdateComment({
 
   const handleChange = (e) => {
     setContent({ ...content, [e.target.id]: e.target.value })
-    // console.log(pops)
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    console.log(pops)
     setIsToggledEdit(!isToggledEdit)
 
     await axios
       .put(`http://localhost:3001/comments/${pops.id}`, content)
-      .then((res) => {
-        // console.log(res)
-        // console.log(res.data)
-      })
   }
 
   return (
@@ -45,7 +38,6 @@ export default function UpdateComment({
         <button
           className=" absolute -bottom-16 right-10 text-base md:-bottom-16 md:right-36 md:text-base font-semibold"
           type="submit"
-          // onClick={() => setIsToggledEdit(!isToggledEdit)}
         >
           SUBMIT
         </button>

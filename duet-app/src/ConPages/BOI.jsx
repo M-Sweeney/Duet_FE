@@ -11,7 +11,6 @@ export default function BOI ({ user, authenticated }) {
     useEffect(() => {
         const getBoi = async () => {
         const response = await axios.get(`http://localhost:3001/users/view`)
-        //   console.log(response.data[0].name)
         setBoi(response.data)
         }
         getBoi()

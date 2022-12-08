@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
 
 export default function Header({ authenticated, user, handleLogOut }) {
-  // console.log(user, authenticated)
   let authenticatedOptions
   if (user) {
     authenticatedOptions = (

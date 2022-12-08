@@ -12,7 +12,6 @@ export default function LikedProfile ( user, authenticated ) {
     useEffect(() => {
         const getLiked = async () => {
         const response = await axios.get(`http://localhost:3001/users/view`)
-        //   console.log(response.data[0].name)
         setLiked(response.data)
         }
         getLiked()
@@ -49,8 +48,6 @@ export default function LikedProfile ( user, authenticated ) {
                     </div>
                 </div>
 
-
-
                 <div className=" hover:scale-110 transition  hover:border-green-300 hover:border-2 h-96 w-56  my-10 liked-card">
                     <div className=" flex justify-center">
                         <img className=" mt-8 rounded-full h-40" src={liked[1].photo} alt=""/>
@@ -71,7 +68,6 @@ export default function LikedProfile ( user, authenticated ) {
                     </div>
                     
                 </div>
-
 
                 <div className=" hover:scale-110 transition  hover:border-green-300 hover:border-2 h-96 w-56  my-10 liked-card">
                     <div className=" flex justify-center">

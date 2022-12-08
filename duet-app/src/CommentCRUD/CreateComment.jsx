@@ -11,19 +11,15 @@ export default function CreateComment({ user }) {
 
   const handleChange = (e) => {
     setContent({ ...content, [e.target.id]: e.target.value })
-    console.log(user)
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
 
-    console.log(content)
 
     await axios
       .post(`http://localhost:3001/comments/${user.id}`, content)
       .then((res) => {
-        console.log(res)
-        console.log(res.data)
       })
   }
 
