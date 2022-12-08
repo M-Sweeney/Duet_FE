@@ -88,7 +88,7 @@ function App() {
           />
           <Route
             path="/conversations"
-            element={<Conversation user={user} authenticated={authenticated} />}
+            element={<Pop user={user} authenticated={authenticated} />}
           />
           <Route
             path="/conversations/pop"
@@ -110,7 +110,7 @@ function App() {
             path="/conversations/kpop"
             element={<KPop user={user} authenticated={authenticated} />}
           />
-          <Route path="/connections" element={<Connection />} />
+          <Route path="/connections" element={<LikedProfile />} />
           <Route
             path="/connections/likedprofiles"
             element={<LikedProfile user={user} authenticated={authenticated} />}
