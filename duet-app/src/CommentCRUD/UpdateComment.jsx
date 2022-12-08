@@ -27,7 +27,7 @@ export default function UpdateComment({
     <div className=" relative edit-comment-div">
       <form onSubmit={handleSubmit}>
         <input
-          className=" absolute right-28 -bottom-24  w-9/12 h-24  edit-comment-input"
+          className=" absolute right-0 md:right-28 -bottom-24  w-9/12 h-24  edit-comment-input"
           id="content"
           type="text"
           placeholder={pops.content}
