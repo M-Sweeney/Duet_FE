@@ -185,16 +185,6 @@
     background-clip: text;
 }
 
-.artistDiv:hover {
-    scale: 115%;
-    transition: .5s ease;
-    color: rgb(255, 255, 255);
-}
-
-.artistImage:hover {
-    border-width: 2px;
-    border-color: greenyellow
-}
 
 .signin {
     min-height: calc(100vh - 4em);
