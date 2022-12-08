@@ -36,62 +36,81 @@ const Register = () => {
   }
 
   return (
-    <div className="signin col">
-      <div className="card-overlay centered">
-        <form className="col" onSubmit={handleSubmit}>
-          <div className="input-wrapper">
-            <label htmlFor="name">Name</label>
-            <input
-              onChange={handleChange}
-              name="name"
-              type="text"
-              placeholder="John Smith"
-              value={formValues.name}
-              required
-            />
-          </div>
-          <div className="input-wrapper">
-            <label htmlFor="email">Email</label>
-            <input
-              onChange={handleChange}
-              name="email"
-              type="email"
-              placeholder="example@example.com"
-              value={formValues.email}
-              required
-            />
-          </div>
+    <div className="registerPage">
+      <div className="grid grid-cols-2 signin col">
+        <div className="text-left slogan">
+          <h1>DUET </h1>
+          <h1>It Takes Two To Duet</h1>
+        </div>
+        <div className="card-overlay centered">
+          <form className="col" onSubmit={handleSubmit}>
+            <div className="input-wrapper">
+              <label className="font-semibold" htmlFor="name">
+                Name
+              </label>
+              <input
+                className="registerInput"
+                onChange={handleChange}
+                name="name"
+                type="text"
+                placeholder="John Smith"
+                value={formValues.name}
+                required
+              />
+            </div>
+            <div className="input-wrapper">
+              <label className="font-semibold" htmlFor="email">
+                Email
+              </label>
+              <input
+                className="registerInput"
+                onChange={handleChange}
+                name="email"
+                type="email"
+                placeholder="example@example.com"
+                value={formValues.email}
+                required
+              />
+            </div>
 
-          <div className="input-wrapper">
-            <label htmlFor="password">Password</label>
-            <input
-              onChange={handleChange}
-              type="password"
-              name="password"
-              value={formValues.password}
-              required
-            />
-          </div>
-          <div className="input-wrapper">
-            <label htmlFor="confirmPassword">Confirm Password</label>
-            <input
-              onChange={handleChange}
-              type="password"
-              name="confirmPassword"
-              value={formValues.confirmPassword}
-              required
-            />
-          </div>
-          <button
-            disabled={
-              !formValues.email ||
-              (!formValues.password &&
-                formValues.confirmPassword === formValues.password)
-            }
-          >
-            Sign In
-          </button>
-        </form>
+            <div className="input-wrapper">
+              <label className="font-semibold" htmlFor="password">
+                Password
+              </label>
+              <input
+                className="registerInput"
+                onChange={handleChange}
+                type="password"
+                name="password"
+                value={formValues.password}
+                required
+              />
+            </div>
+            <div className="input-wrapper">
+              <label className="font-semibold" htmlFor="confirmPassword">
+                Confirm Password
+              </label>
+              <input
+                className="registerInput"
+                onChange={handleChange}
+                type="password"
+                name="confirmPassword"
+                value={formValues.confirmPassword}
+                required
+              />
+            </div>
+            <button
+              className="mt-5 text-2xl font-semibold signinButton"
+              disabled={
+                !formValues.email ||
+                (!formValues.password &&
+                  formValues.confirmPassword === formValues.password)
+              }
+            >
+              SIGN IN
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   )

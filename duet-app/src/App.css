@@ -223,4 +223,26 @@
     outline: none;
 }
 
+.registerInput {
+    background: linear-gradient(120.38deg, rgba(255, 255, 255, 0.15) 44.03%, rgba(118, 116, 116, 0) 100.52%);
+    border: 0.5px solid #FFFFFF;
+    box-shadow: 7px 8px 19px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+}
 
+.siginInput {
+    background: linear-gradient(120.38deg, rgba(255, 255, 255, 0.15) 44.03%, rgba(118, 116, 116, 0) 100.52%);
+    border: 0.5px solid #FFFFFF;
+    box-shadow: 7px 8px 19px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+}
+
+.siginInput {
+    background: linear-gradient(120.38deg, rgba(255, 255, 255, 0.15) 44.03%, rgba(118, 116, 116, 0) 100.52%);
+    border: 0.5px solid #FFFFFF;
+    box-shadow: 7px 8px 19px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+}
