@@ -125,8 +125,8 @@ if (!pop) {
     </div>
     ) : ( 
         <div className='protected'>
-        <h3>Oops! You must be signed in to do that!</h3>
-        <button onClick={()=> navigate('/signin')}>Sign in</button>
+        <h3 className=" font-bold text-4xl text-center mt-48 oops">Oops! You must be signed in to do that!</h3>
+        <button className=" ml-0 mr-0 font-semibold text-base w-52 md:text-5xl md:w-64 md:h-24 create-comment-button" onClick={()=> navigate('/signin')}>SIGN IN</button>
         </div>
     )
 }
