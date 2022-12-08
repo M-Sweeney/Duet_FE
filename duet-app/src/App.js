@@ -2,16 +2,11 @@ import "./App.css"
 import { Route, Routes } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { CheckSession } from "./Services/Auth"
-import GenreSelect from "./Pages/GenreSelect"
-import ArtistSelect from "./Pages/ArtistSelect"
-import Home from "./Pages/Home"
-import Conversation from "./Pages/Conversation"
 import Pop from "./ConvoPages/Pop"
 import RNB from "./ConvoPages/RNB"
 import Rock from "./ConvoPages/Rock"
 import Rap from "./ConvoPages/Rap"
 import KPop from "./ConvoPages/KPop"
-import Connection from "./Pages/Connection"
 import LikedProfile from "./ConPages/LikedProfile"
 import BOI from "./ConPages/BOI"
 import Genre from "./Pages/Genre"
@@ -26,7 +21,6 @@ function App() {
   const [user, setUser] = useState(null)
 
   const handleLogOut = () => {
-    //Reset all auth related state and clear localStorage
     setUser(null)
     toggleAuthenticated(false)
     localStorage.clear()
@@ -78,14 +72,7 @@ function App() {
             }
           />
           <Route path="/register" element={<Register />} />
-          <Route
-            path="/genreselect"
-            element={<GenreSelect user={user} authenticated={authenticated} />}
-          />
-          <Route
-            path="/artistselect"
-            element={<ArtistSelect user={user} authenticated={authenticated} />}
-          />
+
           <Route
             path="/conversations"
             element={<Pop user={user} authenticated={authenticated} />}

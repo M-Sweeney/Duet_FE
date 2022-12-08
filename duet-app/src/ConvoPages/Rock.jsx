@@ -3,7 +3,6 @@ import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import Conversation from "../Pages/Conversation"
 import Rock from "../Assets/beatles.png"
-// import jh from '../Assets/jh.jpeg'
 import heart from "../Assets/heart.png"
 import CreateComment from "../CommentCRUD/CreateComment"
 import DeleteComment from "../CommentCRUD/DeleteComment"

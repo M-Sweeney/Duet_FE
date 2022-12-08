@@ -1,19 +1,13 @@
 import React from "react"
 import axios from "axios"
 
-
 export default function DeleteComment({ comment }) {
   
-
   const handleSubmit = async (event) => {
     event.preventDefault()
-    console.log(comment)
 
     await axios
       .delete(`http://localhost:3001/comments/${comment}`)
-      .then((res) => {
-        console.log(comment)
-      })
   }
 
 

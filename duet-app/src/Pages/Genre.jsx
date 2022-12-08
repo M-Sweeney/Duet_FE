@@ -14,14 +14,14 @@ import Funk from "../Assets/funk.png"
 
 export default function Genre() {
 
-  if (!Genre) {
+if (!Genre) {
     return <h2 className="loading">LOADING</h2>
-  } else {
+} else {
     return (
 
     <div className="flex justify-center">
-      
-      <div className=" grid grid-cols-2 gap-3 md:grid-cols-4 md:grid-rows-4 md:gap-10 mt-10 mb-24 genre-page">
+    
+    <div className=" grid grid-cols-2 gap-3 md:grid-cols-4 md:grid-rows-4 md:gap-10 mt-10 mb-24 genre-page">
         <div className=" mt-4 w-60 md:w-72 h-52 hover:scale-110 hover:border-green-400 transition-all pop-card">
         <h1 className=" absolute top-5 left-3 text-5xl font-semibold text-pink-500 md:text-7xl md:left-3">
             POP
