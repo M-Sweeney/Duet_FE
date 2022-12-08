@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import Conversation from "../Pages/Conversation"
-import Rock from "../Assets/rock.png"
+import Rock from "../Assets/beatles.png"
 // import jh from '../Assets/jh.jpeg'
 import heart from "../Assets/heart.png"
 import CreateComment from "../CommentCRUD/CreateComment"
@@ -19,7 +19,7 @@ useEffect(() => {
     setRock(response.data)
     }
     getRock()
-})
+}, [])
 
 if (!rock) {
     return <h2 className="loading">LOADING</h2>
@@ -33,16 +33,16 @@ if (!rock) {
         <Conversation user={user} authenticated={authenticated} />
 
         <div className=" mt-4 mx-auto w-10/12 h-52 rock-card">
-        <h1 className=" absolute top-10 left-8 text-6xl font-semibold text-pink-500 md:text-7xl md:left-20">
+        <h1 className=" absolute top-10 left-8 text-6xl font-semibold text-amber-100 md:text-7xl md:left-20">
             ROCK
         </h1>
-        <h1 className=" absolute top-24 left-8 text-6xl font-semibold text-pink-500 md:text-7xl md:left-44">
+        <h1 className=" absolute top-24 left-8 text-6xl font-semibold text-amber-100 md:text-7xl md:left-44">
             NOW
         </h1>
         <img
             src={Rock}
             alt=""
-            className=" absolute right-8 bottom-0 max-h-60 md:right-36"
+            className=" absolute right-0 rounded-3xl bottom-0 max-h-48 md:max-h-60 md:right-36"
         />
         </div>
 

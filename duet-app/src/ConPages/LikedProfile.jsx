@@ -1,6 +1,7 @@
 import Connection from "../Pages/Connection"
 import { useState, useEffect } from "react"
 import heart from "../Assets/heart.png"
+import jh from "../Assets/jh.jpeg"
 import axios from "axios"
 export default function LikedProfile ({ user, authenticated }) {
 
@@ -32,7 +33,7 @@ export default function LikedProfile ({ user, authenticated }) {
 
                 <div className=" hover:scale-110 transition hover:border-green-300 hover:border-2 h-96 w-56 my-10 mx-0 liked-card">
                     <div className=" flex justify-center">
-                        <img className=" mt-8 rounded-full h-40" src={liked[0].photo} alt=""/>
+                        <img className=" mt-8 rounded-full h-40" src={jh} alt=""/>
                     </div>
                     <div>
                         <h1 className=" mt-6 font-semibold text-xl text-center">{liked[0].name}</h1>

@@ -34,7 +34,7 @@ export default function UpdateComment({
     <div className=" relative edit-comment-div">
       <form onSubmit={handleSubmit}>
         <input
-          className=" absolute right-0 -bottom-16  w-10/12 h-16  edit-comment-input"
+          className=" absolute right-28 -bottom-24  w-9/12 h-24  edit-comment-input"
           id="content"
           type="text"
           placeholder={pops.content}
@@ -43,7 +43,7 @@ export default function UpdateComment({
           value={content[""]}
         />
         <button
-          className=" absolute -bottom-16 right-10 text-base md:-bottom-16 md:right-10 md:text-base font-semibold"
+          className=" absolute -bottom-16 right-10 text-base md:-bottom-16 md:right-36 md:text-base font-semibold"
           type="submit"
           // onClick={() => setIsToggledEdit(!isToggledEdit)}
         >

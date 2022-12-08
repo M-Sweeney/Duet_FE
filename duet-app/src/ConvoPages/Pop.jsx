@@ -80,7 +80,6 @@ export default function Pop({ user, authenticated }) {
                 <h1 className=" font-medium">{pops.content}</h1>
               </div>
 
-
               {user.id === pops.user_id ? (
                 <div>
                   <button
@@ -92,7 +91,7 @@ export default function Pop({ user, authenticated }) {
                   >
                     EDIT
                   </button>
-                  {isToggledEdit && isCurrent == pops.id ? (
+                  {isToggledEdit && isCurrent === pops.id ? (
                     <UpdateComment
                       user={user}
                       pops={pops}
