@@ -20,7 +20,7 @@ export default function Pop({ user, authenticated }) {
       setPop(response.data)
     }
     getPop()
-  })
+  }, [])
 
   if (!pop) {
     return <h2 className="loading">LOADING</h2>
@@ -79,6 +79,7 @@ export default function Pop({ user, authenticated }) {
               <div className=" absolute top-6 left-28 text-xs w-1/2 md:text-base md:top-6 md:left-40 md:w-2/4 post-content">
                 <h1 className=" font-medium">{pops.content}</h1>
               </div>
+
 
               {user.id === pops.user_id ? (
                 <div>
