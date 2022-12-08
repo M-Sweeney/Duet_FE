@@ -154,6 +154,62 @@
     border-radius: 40px;
 }
 
+.country-card {
+    background: linear-gradient(302.84deg, #afea99 31.56%, #206a32 85.25%);
+    border: 0.5px solid #FFFFFF;
+    box-shadow: 7px 8px 19px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+}
+
+.metal-card {
+    background: linear-gradient(302.84deg, #5e0502 31.56%, #ff0000 85.25%);
+    border: 0.5px solid #FFFFFF;
+    box-shadow: 7px 8px 19px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+}
+
+.edm-card {
+    background: linear-gradient(302.84deg, #5e0303 31.56%, #000000 85.25%);
+    border: 0.5px solid #FFFFFF;
+    box-shadow: 7px 8px 19px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+}
+
+.latin-card {
+    background: linear-gradient(302.84deg, #41b5fd 31.56%, #1769a0 85.25%);
+    border: 0.5px solid #FFFFFF;
+    box-shadow: 7px 8px 19px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+}
+
+.punk-card {
+    background: linear-gradient(302.84deg, #6772ee 31.56%, #5948f6 85.25%);
+    border: 0.5px solid #FFFFFF;
+    box-shadow: 7px 8px 19px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+}
+
+.reggae-card {
+    background: linear-gradient(302.84deg, #e3dd7e 31.56%, #0f830b 85.25%);
+    border: 0.5px solid #FFFFFF;
+    box-shadow: 7px 8px 19px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+}
+
+.funk-card {
+    background: linear-gradient(302.84deg, #af8cf2 31.56%, #ffffff 85.25%);
+    border: 0.5px solid #FFFFFF;
+    box-shadow: 7px 8px 19px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+}
+
 .post-comment {
     background: linear-gradient(120.38deg, rgba(255, 255, 255, 0.15) 44.03%, rgba(118, 116, 116, 0) 100.52%);
     border: 0.5px solid #FFFFFF;
