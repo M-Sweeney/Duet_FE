@@ -20,6 +20,7 @@ export default function UpdateComment({
   const handleSubmit = async (event) => {
     event.preventDefault()
     console.log(pops)
+    setIsToggledEdit(!isToggledEdit)
 
     await axios
       .put(`http://localhost:3001/comments/${pops.id}`, content)
