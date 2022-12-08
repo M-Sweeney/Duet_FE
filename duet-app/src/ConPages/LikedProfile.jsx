@@ -117,7 +117,7 @@ export default function LikedProfile ( user, authenticated ) {
                 </div>
 
 
-                <div className=" hover:scale-110 transition  hover:border-green-300 hover:border-2 h-96 w-56  mt-10 mb-36 liked-card">
+                <div className=" hover:scale-110 transition  hover:border-green-300 hover:border-2 h-96 w-56 mt-10 mb-36 md:mt-0 liked-card">
                     <div className=" flex justify-center">
                         <img className=" mt-8 rounded-full h-40" src={liked[4].photo} alt=""/>
                     </div>
