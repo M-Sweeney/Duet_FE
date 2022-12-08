@@ -25,9 +25,9 @@ export default function Artist() {
         <div className="align-center mt-6 mb-24 md:mt-8 md:mb-16 grid grid-cols-2 gap-x-6 gap-y-8 md:gap-x-20 md:gap-y-10 md:grid-cols-4 md:grid-rows-3 artist-page">
           {artist.map((artists) => (
             <div className="" key={artists.id}>
-              <div className="artistDiv">
+              <div className=" hover:scale-110 transition">
                 <img
-                  className=" rounded-full artistImage"
+                  className=" rounded-full hover:border-2 hover:border-green-400 transition"
                   src={artists.photo}
                   width="200px"
                   height="200px"
