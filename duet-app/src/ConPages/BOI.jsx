@@ -25,7 +25,7 @@ export default function BOI ({ user, authenticated }) {
 
                 <Connection />
 
-                <div>
+                <div className=" mb-36">
                     <div>
                         <h1 className=" font-bold text-5xl md:text-7xl text-center mt-20 bog-title">BECAUSE YOU LIKE POP & R&B</h1>
                     </div>
@@ -53,8 +53,8 @@ export default function BOI ({ user, authenticated }) {
                 </div>
 
                 <div>
-                    <div>
-                        <h1 className=" font-bold text-5xl md:text-7xl text-center mt-36 md:mt-48 bog-title">BECAUSE YOU LIKE THE BEATLES</h1>
+                    <div className=" border-t-2 border-purple-400">
+                        <h1 className=" font-bold text-5xl md:text-7xl text-center mt-36 md:mt-36 bog-title">BECAUSE YOU LIKE THE BEATLES</h1>
                     </div>
 
                     <div className=" flex justify-evenly mt-24 mb-40 md:my-32">
