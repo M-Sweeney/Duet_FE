@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 import Conversation from "../Pages/Conversation"
 import Kpop from "../Assets/lisa.png"
 // import jh from '../Assets/jh.jpeg'
@@ -13,6 +14,7 @@ const [kpop, setKpop] = useState(null)
 const [isToggled, setIsToggled] = useState(false)
 const [isToggledEdit, setIsToggledEdit] = useState(false)
 const [isCurrent, setCurrent] = useState(null)
+let navigate = useNavigate()
 
 useEffect(() => {
     const getKpop = async () => {
@@ -25,11 +27,7 @@ useEffect(() => {
 if (!kpop) {
     return <h2 className="loading">LOADING</h2>
 } else {
-    return !kpop ? (
-    <div>
-        <h2 className="loading">Loading</h2>
-    </div>
-    ) : (
+    return (user && authenticated) ? (
     <div className=" relative kpop-page">
         <Conversation user={user} authenticated={authenticated} />
 
@@ -121,6 +119,11 @@ if (!kpop) {
             </div>
         ))}
     </div>
+    ) : ( 
+        <div className='protected'>
+        <h3>Oops! You must be signed in to do that!</h3>
+        <button onClick={()=> navigate('/signin')}>Sign in</button>
+        </div>
     )
 }
 }

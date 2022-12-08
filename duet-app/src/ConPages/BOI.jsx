@@ -1,29 +1,26 @@
 import Connection from "../Pages/Connection"
 import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import jh from "../Assets/jh.jpeg"
 
 export default function BOI ({ user, authenticated }) {
-
     const [boi, setBoi] = useState(null)
+    let navigate = useNavigate()
 
     useEffect(() => {
         const getBoi = async () => {
-          const response = await axios.get(`http://localhost:3001/users/view`)
+        const response = await axios.get(`http://localhost:3001/users/view`)
         //   console.log(response.data[0].name)
-          setBoi(response.data)
+        setBoi(response.data)
         }
         getBoi()
-      }, [])
+    }, [])
 
-      if (!boi) {
+    if (!boi) {
         return <h2 className="loading">LOADING</h2>
-      } else {
-        return !boi ? (
-            <div>
-            <h2 className="loading">Loading</h2>
-          </div>
-        ) : (
+    } else {
+        return (user && authenticated) ? (
             <div className="boi-page">
 
                 <Connection />
@@ -84,7 +81,12 @@ export default function BOI ({ user, authenticated }) {
 
 
             </div>
-        )
+    ) : ( 
+        <div className='protected'>
+        <h3>Oops! You must be signed in to do that!</h3>
+        <button onClick={()=> navigate('/signin')}>Sign in</button>
+        </div>
+    )
     }
 
 }
