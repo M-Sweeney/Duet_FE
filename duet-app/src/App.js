@@ -50,7 +50,7 @@ function App() {
     <div className="App">
       <div className=" invisible md:visible header">
         <Header
-          className=' invisible md:visible'
+          className=" invisible md:visible"
           authenticated={authenticated}
           user={user}
           handleLogOut={handleLogOut}
@@ -61,7 +61,7 @@ function App() {
           <Route
             path="/"
             element={
-              <Home
+              <Pop
                 authenticated={authenticated}
                 user={user}
                 handleLogOut={handleLogOut}
@@ -125,7 +125,7 @@ function App() {
       </div>
       <div className=" visible md:invisible  mobile-header">
         <MobileHeader
-          className=' visible md:invisible'
+          className=" visible md:invisible"
           authenticated={authenticated}
           user={user}
           handleLogOut={handleLogOut}

@@ -1,29 +1,19 @@
 import React from "react"
 import axios from "axios"
 import { useState } from "react"
-// import { useParams } from "react-router-dom"
 
 export default function DeleteComment({ comment }) {
   const [content, setContent] = useState("")
-  // let { id } = useParams()
-
-  // const handleChange = (e) => {
-  //   setContent({ ...content, [e.target.id]: e.target.value })
-  //   console.log(user)
-  // }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
     console.log(comment)
 
-    //NEED TO FIGURE out how to called the COMMENT ID
     await axios
       .delete(`http://localhost:3001/comments/${comment}`)
       .then((res) => {
         console.log(comment)
-        // console.log(res.data)
       })
-    // window.location.reload()
   }
 
 
