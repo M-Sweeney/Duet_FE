@@ -23,6 +23,12 @@ const SignIn = (props) => {
   return (
     <div className="signin col">
       <div className="card-overlay centered">
+      <div className=" -mt-24 signin flex h-screen justify-center items-center">
+        <div className="text-left text-5xl ml-20 mr-20 mb-10 slogan">
+          <h1 className="font-bold">DUET </h1>
+          <h1 className=" font-light ">Harmonize Your Heart</h1>
+        </div>
+        <div className="card-overlay float-right mr-36">
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
             <label className="font-semibold" htmlFor="email">
@@ -58,9 +64,15 @@ const SignIn = (props) => {
             SIGN IN
           </button>
         </form>
+        </div>
+      </div>
       </div>
     </div>
   )
 }
 
 export default SignIn
+
+
+
+
