@@ -1,5 +1,3 @@
-![image](https://tinypic.host/images/2022/11/30/Screenshot-2022-11-29-at-5.28.54-PM.png)
-
 ## DUET
 
 ## Team
