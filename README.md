@@ -9,6 +9,7 @@
 ## Description
 
 DUET is a social app where you can make connections with others based on your taste in music.
+[Back-end Repository](https://github.com/DuetSocial/Duet_BE)
 
 ## How to Get Started
 
